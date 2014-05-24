@@ -1,0 +1,3 @@
+[submodule "Resources/public/js/wix-ui-lib"]
+	path = Resources/public/js/wix-ui-lib
+	url = git@github.com:mallowigi/wix-ui-lib.git

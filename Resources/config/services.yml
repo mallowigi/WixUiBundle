@@ -1,0 +1,35 @@
+services:
+    wix.wix_form.type.range:
+        class:           Wix\UiBundle\Form\Type\RangeType
+        tags:
+            - { name: form.type, alias: range }
+
+    wix.wix_form.type.wix_color:
+        class:           Wix\UiBundle\Form\Type\WixColorPickerType
+        tags:
+            - { name: form.type, alias: wix_color }
+
+    wix.wix_form.type.wix_color_opacity:
+        class:           Wix\UiBundle\Form\Type\WixColorPickerOpacityType
+        tags:
+            - { name: form.type, alias: wix_color_opacity }
+
+    wix.wix_form.type.wix_font:
+        class:          Wix\UiBundle\Form\Type\WixFontPickerType
+        tags:
+            - { name: form.type, alias: wix_font }
+
+    wix.wix_form.type.wix_lang_picker:
+        class:          Wix\UiBundle\Form\Type\LanguagePickerType
+        tags:
+            - { name: form.type, alias: wix_lang_picker }
+
+    wix.twig.hex_to_rgba_extension:
+        class:          Wix\UiBundle\Twig\HexToRgbaExtension
+        tags:
+            - { name: twig.extension }
+
+    wix.twig.wix_style_extension:
+        class:          Wix\UiBundle\Twig\WixStyleExtension
+        tags:
+            - { name: twig.extension}

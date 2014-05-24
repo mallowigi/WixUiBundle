@@ -1,0 +1,46 @@
+{% extends 'form_div_layout.html.twig' %}
+{% block range_widget %}
+    {% spaceless %}
+        <div wix-ctrl="Slider" class="slider uilib-slider default-uilib-slider-ui"
+             data-min="{{ min }}" data-max="{{ max }}" data-step="{{ step }}" data-value="{{ value }}">
+            <input class="slider_value" {{ block('widget_attributes') }} type="hidden" value="{{ value }}"/>
+        </div>
+    {% endspaceless %}
+{% endblock %}
+
+{% block wix_color_widget %}
+    {% spaceless %}
+        <div wix-param="{{ wixModel }}" wix-ctrl="ColorPicker" wix-options="{{ wixOptions }}"
+             class="color_picker" data-value="{{ value }}" {{ block('widget_attributes') }}>
+        </div>
+        <input class="color_value" {{ block('widget_attributes') }} type="hidden" value="{{ value }}"/>
+    {% endspaceless %}
+{% endblock %}
+
+{% block wix_color_opacity_widget %}
+    {% spaceless %}
+        <div wix-param="{{ wixModel }}" wix-ctrl="ColorPickerWithOpacity" wix-options="{{ wixOptions }}"
+             class="color_picker_opacity" data-value="{{ value }}" {{ block('widget_attributes') }}>
+        </div>
+        <input class="color_opacity_value" {{ block('widget_attributes') }} type="hidden" value="{{ value }}"/>
+    {% endspaceless %}
+{% endblock %}
+
+
+{% block wix_lang_picker_widget %}
+    {% spaceless %}
+        <div wix-model="{{ wixModel }}" wix-ctrl="LanguagePicker" class="language_picker"
+             data-value="{{ value }}" wix-options="{{ wixOptions }}">
+        </div>
+        <input class="lang_value" {{ block('widget_attributes') }} type="hidden" value="{{ value }}"/>
+    {% endspaceless %}
+{% endblock %}
+
+{% block wix_font_widget %}
+    {% spaceless %}
+        <div wix-param="{{ wixModel }}" wix-ctrl="FontStylePicker" class="font_picker" data-value="{{ value }}"
+             wix-options="{{ wixOptions }}">
+        </div>
+        <input class="font_value" {{ block('widget_attributes') }} type="hidden" value="{{ value }}"/>
+    {% endspaceless %}
+{% endblock %}
