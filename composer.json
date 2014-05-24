@@ -1,0 +1,19 @@
+{
+    "name": "wix/ui-bundle",
+    "description": "Wix Ui Symfony bundle",
+    "require": {
+        "symfony/symfony": "~2.1"
+    },
+    "licence": "MIT",
+    "authors": [
+        {
+            "name": "Elior Boukhobza",
+            "email": "elior.boukhobza@gmail.com"
+        }
+    ],
+    "minimum-stability": "dev",
+    "autoload": {
+        "psr-0": {"Wix\\UiBundle": ""}
+    },
+    "target-dir": "Wix/UiBundle"
+}
