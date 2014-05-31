@@ -20,6 +20,11 @@ class HexToRgbaExtension extends \Twig_Extension
 
 	public function hexToRgbaFilter($hex, $opacity, $isTransparent = true)
 	{
+		// If a color theme is passed
+		if (strpos($hex, '#') === false) {
+			return $hex;
+		}
+
 		$hex = str_replace("#", "", $hex);
 		if ($isTransparent) {
 			$opacity = $opacity < 1 ? $opacity : $opacity / 100;
