@@ -6,7 +6,7 @@
  * Time: 1:00 PM
  */
 
-namespace Wix\UiBundle\Form\Type;
+namespace Wix\InstagramBundle\Form\Type;
 
 
 use Symfony\Component\Form\AbstractType;
@@ -30,7 +30,7 @@ class WixColorPickerType extends AbstractType
 	{
 		return array(
 			'wixModel' => '',
-			'wixOptions' => "{startWithColor:'black/white'}"
+			'wixOptions' => array('startWithColor' => "white/black")
 		);
 	}
 
@@ -43,6 +43,6 @@ class WixColorPickerType extends AbstractType
 	public function buildView(FormView $view, FormInterface $form)
 	{
 		$view->set('wixModel', $form->getAttribute('wixModel'));
-		$view->set('wixOptions', $form->getAttribute('wixOptions'));
+		$view->set('wixOptions', stripslashes(json_encode($form->getAttribute('wixOptions'))));
 	}
 } 
